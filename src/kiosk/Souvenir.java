@@ -1,11 +1,11 @@
 package kiosk;
 
-public class Souvenirs {
+public class Souvenir {
 
     private String souvenir;
     private int price;
 
-    public Souvenirs(String souvenir, int price){
+    public Souvenir(String souvenir, int price){
 
         this.souvenir = souvenir;
         this.price = price;

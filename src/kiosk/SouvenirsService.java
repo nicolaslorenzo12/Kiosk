@@ -4,31 +4,30 @@ import java.util.Scanner;
 
 public class SouvenirsService {
 
-    ArrayList<Souvenirs> souvenir = new ArrayList<Souvenirs>();
+    ArrayList<Souvenir> souvenirs = new ArrayList<Souvenir>();
     private final Scanner sc = new Scanner(System.in);
 
     public SouvenirsService(){
-        Souvenirs souvenir1 = new Souvenirs("Minipizza", 5);
-        Souvenirs souvenir2 = new Souvenirs("Donut", 3);
-        Souvenirs souvenir3 = new Souvenirs("Sandwich", 4);
-        Souvenirs souvenir4 = new Souvenirs("Coke", 4);
-        Souvenirs souvenir5 = new Souvenirs("Beer", 2);
-        Souvenirs souvenir6 = new Souvenirs("Milkshake", 6);
-        souvenir.add(souvenir1);
-        souvenir.add(souvenir2);
-        souvenir.add(souvenir3);
-        souvenir.add(souvenir4);
-        souvenir.add(souvenir5);
-        souvenir.add(souvenir6);
-
+        Souvenir souvenir1 = new Souvenir("Minipizza", 5);
+        Souvenir souvenir2 = new Souvenir("Donut", 3);
+        Souvenir souvenir3 = new Souvenir("Sandwich", 4);
+        Souvenir souvenir4 = new Souvenir("Coke", 4);
+        Souvenir souvenir5 = new Souvenir("Beer", 2);
+        Souvenir souvenir6 = new Souvenir("Milkshake", 6);
+        souvenirs.add(souvenir1);
+        souvenirs.add(souvenir2);
+        souvenirs.add(souvenir3);
+        souvenirs.add(souvenir4);
+        souvenirs.add(souvenir5);
+        souvenirs.add(souvenir6);
     }
 
     public void Welcoming(){
         System.out.println("Welcome to my kiosk");
         System.out.println("Please see our souvenirs and their prices");
 
-        for(int x = 0; x < souvenir.size(); x++){
-            System.out.println(souvenir.get(x).getSouvenir() + " " + souvenir.get(x).getPrice() + "$");
+        for(int x = 0; x < souvenirs.size(); x++){
+            System.out.println(souvenirs.get(x).getSouvenir() + " " + souvenirs.get(x).getPrice() + "$");
         }
     }
 
@@ -43,15 +42,15 @@ public class SouvenirsService {
             System.out.println("Please type correctly the souvenir that you want, if you do not want something else please type (exit)");
             order = sc.nextLine();
 
-            for(int x = 0; x < souvenir.size(); x++){
+            for(int x = 0; x < souvenirs.size(); x++){
 
-                if(order.equals(souvenir.get(x).getSouvenir())){
+                if(order.equals(souvenirs.get(x).getSouvenir())){
 
-                    totalPrice = totalPrice + souvenir.get(x).getPrice();
-                    System.out.println("You just ordered " + souvenir.get(x).getSouvenir());
+                    totalPrice = totalPrice + souvenirs.get(x).getPrice();
+                    System.out.println("You just ordered " + souvenirs.get(x).getSouvenir());
                     System.out.println("For the moment the amount of money that you should pay is " + totalPrice + "$");
                     souvenirFound = true;
-                    x = souvenir.size();
+                    x = souvenirs.size();
                 }
             }
 
