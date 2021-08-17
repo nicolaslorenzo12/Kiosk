@@ -27,7 +27,7 @@ public class SouvenirsService {
         System.out.println("Please see our souvenirs and their prices");
 
         for(int x = 0; x < souvenirs.size(); x++){
-            System.out.println(souvenirs.get(x).getSouvenirs() + " " + souvenirs.get(x).getPrice() + "$");
+            System.out.println(souvenirs.get(x).getDescription() + " " + souvenirs.get(x).getPrice() + "$");
         }
     }
 
@@ -44,10 +44,10 @@ public class SouvenirsService {
 
             for(int x = 0; x < souvenirs.size(); x++){
 
-                if(order.equals(souvenirs.get(x).getSouvenirs())){
+                if(order.equals(souvenirs.get(x).getDescription())){
 
                     totalPrice = totalPrice + souvenirs.get(x).getPrice();
-                    System.out.println("You just ordered " + souvenirs.get(x).getSouvenirs());
+                    System.out.println("You just ordered " + souvenirs.get(x).getDescription());
                     System.out.println("For the moment the amount of money that you should pay is " + totalPrice + "$");
                     souvenirFound = true;
                     x = souvenirs.size();

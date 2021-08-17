@@ -2,17 +2,17 @@ package kiosk;
 
 public class Souvenir {
 
-    private String souvenirs;
+    private String description;
     private int price;
 
-    public Souvenir(String souvenir, int price){
+    public Souvenir(String description, int price){
 
-        this.souvenirs = souvenir;
+        this.description = description;
         this.price = price;
     }
 
-    public String getSouvenirs(){
-        return souvenirs;
+    public String getDescription(){
+        return description;
     }
 
     public int getPrice(){
